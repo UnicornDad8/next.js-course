@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/node_modules/next/link";
 import ProductCard from "./components/ProductCard";
 
 export default function Home() {
