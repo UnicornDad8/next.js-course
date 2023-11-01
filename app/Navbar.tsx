@@ -13,9 +13,9 @@ const Navbar = () => {
         Next.js
       </Link>
       <Link href="/users">Users</Link>
-      {/*status === "loading" && (
+      {status === "loading" && (
         <span className="loading loading-dots loading-md"></span>
-      )*/}
+      )}
       {status === "authenticated" && (
         <div>
           {session.user!.name}
