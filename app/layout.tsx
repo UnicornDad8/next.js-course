@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Roboto } from "next/font/google";
 import localFont from "next/font/local";
-import NavBar from "./NavBar";
+import Navbar from "./Navbar";
 import AuthProvider from "./auth/Provider";
 import GoogleAnalyticsScript from "./GoogleAnalyticsScript";
 
@@ -37,7 +37,7 @@ export default function RootLayout({
       <GoogleAnalyticsScript />
       <body className={poppins.variable}>
         <AuthProvider>
-          <NavBar />
+          <Navbar />
           <main className="p-5">{children}</main>
         </AuthProvider>
       </body>

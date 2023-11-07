@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
 
-const NavBar = () => {
+const Navbar = () => {
   const { status, data: session } = useSession();
 
   return (
@@ -13,6 +13,9 @@ const NavBar = () => {
         Next.js
       </Link>
       <Link href="/users">Users</Link>
+      {status === "loading" && (
+        <span className="loading loading-dots loading-md"></span>
+      )}
       {status === "authenticated" && (
         <div>
           {session.user!.name}
@@ -28,4 +31,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
