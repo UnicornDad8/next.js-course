@@ -1,3 +1,4 @@
+/*
 import { NextResponse } from "@/node_modules/next/server";
 import { Resend } from "resend";
 import WelcomeTemplate from "@/emails/WelcomeTemplate";
@@ -14,3 +15,4 @@ export async function POST() {
 
   return NextResponse.json({});
 }
+*/
