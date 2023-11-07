@@ -1,21 +1,18 @@
 "use client";
 
-import React from "react";
 import { useSession } from "next-auth/react";
-import Link from "@/node_modules/next/link";
+import Link from "next/link";
+import React from "react";
 
-const Navbar = () => {
+const NavBar = () => {
   const { status, data: session } = useSession();
 
   return (
-    <div className="flex bg-slate-200 p-5 space-x-3">
+    <div className="flex bg-slate-200 p-3 space-x-3 text-gray-600">
       <Link href="/" className="mr-5">
         Next.js
       </Link>
       <Link href="/users">Users</Link>
-      {status === "loading" && (
-        <span className="loading loading-dots loading-md"></span>
-      )}
       {status === "authenticated" && (
         <div>
           {session.user!.name}
@@ -31,4 +28,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;

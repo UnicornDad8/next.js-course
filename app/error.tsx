@@ -1,22 +1,20 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react'
 
-interface Props {
+interface Props { 
   error: Error;
   reset: () => void;
 }
 
 const ErrorPage = ({ error, reset }: Props) => {
-  console.log("Error: ", error);
+  console.log('Error', error);
 
   return (
     <>
       <div>An unexpected error has occurred.</div>
-      <button className="btn" onClick={() => reset()}>
-        Retry
-      </button>
+      <button className="btn" onClick={() => reset()}>Retry</button>
     </>
-  );
-};
+  )
+}
 
-export default ErrorPage;
+export default ErrorPage

@@ -20,29 +20,26 @@ const UploadPage = () => {
         />
       )}
       <CldUploadWidget
-        uploadPreset="a8ihhzc9"
-        onUpload={(result, widget) => {
-          if (result.event !== "success") return;
-          const info = result.info as CloudinaryResult;
-          setPublicId(info?.public_id);
-        }}
+        uploadPreset="gdbybt2f"
         options={{
           sources: ["local"],
           multiple: false,
           maxFiles: 5,
         }}
-      >
-        {({ open }) => {
-          function handleOpen(e) {
-            e.preventDefault();
-            open();
-          }
-          return (
-            <button className="btn btn-primary" onClick={handleOpen}>
-              Upload
-            </button>
-          );
+        onUpload={(result, widget) => {
+          if (result.event !== "success") return;
+          const info = result.info as CloudinaryResult;
+          setPublicId(info.public_id);
         }}
+      >
+        {({ open }) => (
+          <button
+            className="btn btn-primary"
+            onClick={() => open()}
+          >
+            Upload
+          </button>
+        )}
       </CldUploadWidget>
     </>
   );

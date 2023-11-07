@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react'
 
 const Loading = () => {
-  return <span className="loading loading-spinner loading-md"></span>;
-};
+  return (
+    <span className="loading loading-spinner loading-md"></span>
+  )
+}
 
-export default Loading;
+export default Loading

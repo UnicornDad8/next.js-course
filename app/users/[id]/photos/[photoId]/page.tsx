@@ -1,15 +1,13 @@
-import React from "react";
+import React from 'react'
 
 interface Props {
-  params: { id: number; photoId: number };
+  params: { id: number; photoId: number; }
 }
 
-const PhotoPage = ({ params: { id, photoId } }: Props) => {
+const PhotoPage = ({ params: { id, photoId }}: Props) => {
   return (
-    <div>
-      Photo Page... {id} {photoId}
-    </div>
-  );
-};
+    <div>PhotoPage {id} {photoId}</div>
+  )
+}
 
-export default PhotoPage;
+export default PhotoPage
